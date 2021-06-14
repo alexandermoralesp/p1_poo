@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-  short numero=0;
-  short dos=1;
+  short numero{};
+  short dos{1};
   char boton;
   bool inicio;
 
