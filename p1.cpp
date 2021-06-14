@@ -7,25 +7,18 @@ int main(){
         char btn;
         for(int i =0; i<15; i++){
                 do{
-                cout<<"Boton rojo (R) o azul (A): ";
-                cin>>btn;
-                }
-                while(btn!='R' && btn!='A');
+                	cout<<"Boton rojo (R) o azul (A): ";
+                	cin>>btn;
+                }while(btn!='R' && btn!='A');
                 if(btn=='R') clave[i] = 1;
                 else clave[i]=0;
-
-
         }
 
         bool binario[5];
         for(int i=2; i<15; i+=3){
                 if(clave[i]==clave[i-2]&&clave[i]==!clave[i-1]){
-                        if(clave[i]){
-                                binario[(i-2)/3] = 1;
-                        }
-                        else {
-                                binario[(i-2)/3] = 0;
-                        }
+                        if(clave[i]) binario[(i-2)/3] = 1;
+                        else binario[(i-2)/3] = 0;
                 }
                 else{
                         cout<<"Patron incorrecto"<<endl;
@@ -37,13 +30,12 @@ int main(){
 	for(int i=4; i>-1; i--){
 		if(binario[4-i]){
 			dos=1;
-			for(int j=0; j<i; j++)
-				dos*=2;
+			for(int j=0; j<i; j++) dos*=2;
 			numero+=dos;
 		}
 	}
         
-        short primos[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
+        short primos[11]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
 	short *pr = find(primos, primos+11, numero);
 	if(pr!=primos+11){
 		cout<<"Clave correcta"<<endl;
