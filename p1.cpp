@@ -36,8 +36,7 @@ int main(){
 	}
         
         short primos[11]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
-	short *pr = find(primos, primos+11, numero);
-	if(pr!=primos+11){
+	if(binary_search(primos, primos+11, numero)){
 		cout<<"Clave correcta"<<endl;
 		return 0;
 	}
