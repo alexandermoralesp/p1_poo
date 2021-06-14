@@ -4,7 +4,6 @@ using namespace std;
 
 int main(){
         bool clave[15];
-        bool valido{true};
         char btn;
         for(int i =0; i<15; i++){
                 do{
