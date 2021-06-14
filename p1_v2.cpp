@@ -34,9 +34,7 @@ int main() {
       else{
         if(inicio){
           dos=1;
-          for(short j=4; j>(i-2)/3; j--){
-            dos*=2;
-          }
+          for(short j=4; j>(i-2)/3; j--) dos*=2;
           numero+=dos;
         }
       }
